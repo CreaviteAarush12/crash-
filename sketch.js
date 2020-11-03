@@ -1,6 +1,6 @@
 var car,wall
 var speed,weight
-
+var bulletRightEdge,wallRightEdge;
 
 
 function setup() {
@@ -12,6 +12,25 @@ function setup() {
   weight = random (400,1500);
   car.velocityX = speed;
   
+
+  function hascollided (Lbullet,Lwall){
+
+    bulletRightEdge = Lbullet.x + Lbullet.width;
+    wallLeftEdge = Lwall.x
+    if (bulletRightEdge>= wallRightEdge){
+    
+      return true
+    }
+    return false
+    
+    
+    }
+    
+
+
+
+
+
 }
 
 function draw() {
